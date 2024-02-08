@@ -2,9 +2,9 @@
 
 # dependencies
 /node_modules
-node_modules
+node_modules/
 /.pnp
-.pnp
+.pnp/
 .pnp.js
 .yarn/install-state.gz
 
@@ -13,10 +13,13 @@ node_modules
 
 # next.js
 /.next/
+.next/
 /out/
+out/
 
 # production
 /build
+build/
 
 # misc
 .DS_Store
@@ -38,4 +41,11 @@ yarn-error.log*
 next-env.d.ts
 postgres-data
 
+# python backend cache
 __pycache__/
+
+# heavy assets
+*.png
+*.jpg
+*.jpeg
+
