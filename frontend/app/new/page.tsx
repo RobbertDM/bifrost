@@ -15,12 +15,14 @@
 */
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import Navbar from "../navbar.tsx"
+import Header from "../header.tsx"
 
-export default function Form() {
+export default function NewProject() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0">
     <div className="w-full"> 
      <Navbar />
+     <Header pageName="Request new project" />
     </div>
       <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">
       <div className="items-center">

@@ -32,3 +32,8 @@ body {
     text-wrap: balance;
   }
 }
+
+/* overrule the default gridjs style */
+.gridjs-search-input {
+  width: 100%;
+}
