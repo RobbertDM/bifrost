@@ -14,8 +14,8 @@
   ```
 */
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
-import Navbar from "../navbar.tsx"
-import Header from "../header.tsx"
+import Navbar from "../../navbar.tsx"
+import Header from "../../header.tsx"
 
 export default function NewProject() {
   return (

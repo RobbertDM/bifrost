@@ -4,10 +4,13 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
-  { name: 'Projects', href: 'projects', current: false },
-  { name: 'New', href: 'new', current: false },
   { name: 'Users', href: 'users', current: false },
+  { name: 'Projects', href: 'projects', current: false },
+  { name: 'Write topics', href: 'write_topics', current: false },
+  { name: 'Read topics', href: 'read_topics', current: false },
+  { name: 'Request', href: 'request', current: false },
   { name: 'Log', href: 'log', current: false },
+  { name: 'Lineage', href: 'lineage', current: false },
 ]
 
 function classNames(...classes) {
