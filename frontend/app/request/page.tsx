@@ -1,13 +1,13 @@
 "use client";
-import Navbar from "../navbar.tsx";
-import Header from "../header.tsx";
+import Navbar from "../navbar";
+import Header from "../header";
 
 export default function Request() {
   return (
-      <main className="flex min-h-screen flex-col items-center justify-between p-0">
-      <div className="w-full"> 
-      <Navbar />
-      <Header pageName="Request" />
+    <main className="flex min-h-screen flex-col items-center justify-between p-0">
+      <div className="w-full">
+        <Navbar />
+        <Header pageName="Request" />
       </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left">
         <a
@@ -40,7 +40,8 @@ export default function Request() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            A place for your project to write to. Only your project can write to it. No one else. Promise.
+            A place for your project to write to. Only your project can write to
+            it. No one else. Promise.
           </p>
         </a>
 
@@ -57,7 +58,7 @@ export default function Request() {
             </span>
           </h2>
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Ask kindly for read access to someone else's write topic.
+            Ask kindly for read access to someone else&apos;s write topic.
           </p>
         </a>
 
@@ -78,9 +79,7 @@ export default function Request() {
           </p>
         </a>
       </div>
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-      </div>
-      </main>
-      );
-
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
+    </main>
+  );
 }
