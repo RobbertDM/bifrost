@@ -7,7 +7,7 @@ import ReactFlow, {
   Edge,
   Connection,
   useNodesState,
-  useEdgesState
+  useEdgesState,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
@@ -17,19 +17,15 @@ const initialNodes: Node[] = [
     id: "mdm",
     type: "input",
     data: { label: "mdm" },
-    position: { x: 250, y: 5 }
+    position: { x: 250, y: 5 },
   },
-  { id: "wind",
-    data: { label: "wind" },
-    position: { x: 100, y: 100 } },
-  { id: "audit",
-    data: { label: "audit" },
-    position: { x: 400, y: 100 } },
+  { id: "wind", data: { label: "wind" }, position: { x: 100, y: 100 } },
+  { id: "audit", data: { label: "audit" }, position: { x: 400, y: 100 } },
   {
     id: "customer",
     data: { label: "customer" },
-    position: { x: 400, y: 200 }
-  }
+    position: { x: 400, y: 200 },
+  },
 ];
 
 const initialEdges: Edge[] = [
@@ -44,7 +40,7 @@ export default function BasicFlow() {
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const onConnect = useCallback(
     (params: Edge | Connection) => setEdges((els) => addEdge(params, els)),
-    [setEdges]
+    [setEdges],
   );
 
   return (
@@ -59,6 +55,4 @@ export default function BasicFlow() {
       <Background />
     </ReactFlow>
   );
-};
-
-
+}
