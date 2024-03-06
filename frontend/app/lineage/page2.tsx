@@ -1,10 +1,8 @@
 "use client";
 import "../globals.css";
-import Image from "next/image";
 import { Grid, _ } from "gridjs-react";
 import "gridjs/dist/theme/mermaid.css";
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../navbar";
 import Header from "../header";
 import BasicFlow from "./flow";
 
@@ -12,7 +10,6 @@ export default function Home() {
   return (
     <main className="min-h-screen flex-col items-center justify-between p-0">
       <div className="w-full">
-        <Navbar />
         <Header pageName="Lineage" />
       </div>
       <div className="w-100 min-w-100 h-100 min-h-100">

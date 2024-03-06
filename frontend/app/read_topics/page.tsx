@@ -1,10 +1,8 @@
 "use client";
 import "../globals.css";
-import Image from "next/image";
 import { Grid, _ } from "gridjs-react";
 import "gridjs/dist/theme/mermaid.css";
-import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../navbar";
+import React, { useEffect, useState } from "react";
 import Header from "../header";
 import { UserLink, ProjectBadges } from "@/components/link";
 
@@ -26,7 +24,6 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0">
       <div className="w-full">
-        <Navbar />
         <Header pageName="Read topics" />
       </div>
       <div className="z-10 max-w-5xl w-full items-center justify-between text-sm lg:flex">

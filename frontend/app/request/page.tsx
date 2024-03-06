@@ -1,12 +1,10 @@
 "use client";
-import Navbar from "../navbar";
 import Header from "../header";
 
 export default function Request() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0">
       <div className="w-full">
-        <Navbar />
         <Header pageName="Request" />
       </div>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:grid-cols-2 lg:text-left">

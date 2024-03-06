@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import "../globals.css";
-import Navbar from "../navbar";
 import Header from "../header";
 // import dynamic from "next/dynamic";
 import Graph from "@/components/graph";
@@ -142,7 +141,6 @@ export default function Lineage() {
   return (
     <main className="min-h-screen flex-col items-center justify-between p-0">
       <div className="w-full">
-        <Navbar />
         <Header pageName="Lineage" />
       </div>
 
