@@ -4,29 +4,9 @@ import Image from "next/image";
 import { Grid, _ } from "gridjs-react";
 import "gridjs/dist/theme/mermaid.css";
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "../navbar.tsx";
-import Header from "../header.tsx";
-
-const UserLink = ({ name }) => <a href={"/users/" + name}>{name}</a>;
-const ProjectLink = ({ name }) => <a href={"/projects/" + name}>{name}</a>;
-
-// Custom component to render Projects as badges
-const ProjectBadges = ({ values }) => {
-  return (
-    <div>
-      {(values as Array).map((project, idx) => {
-        return (
-          <span
-            key={idx}
-            className="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20 mr-2"
-          >
-            <ProjectLink name={project} />
-          </span>
-        );
-      })}
-    </div>
-  );
-};
+import Navbar from "../navbar";
+import Header from "../header";
+import { UserLink, ProjectBadges } from "@/components/link";
 
 export default function Home() {
   useEffect(() => {
@@ -56,12 +36,12 @@ export default function Home() {
               {
                 id: "name",
                 name: "User",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: string) => _(<UserLink name={cell} />),
               },
               {
                 id: "projects",
                 name: "Projects",
-                formatter: (cell) => _(<ProjectBadges values={cell} />),
+                formatter: (cell: any) => _(<ProjectBadges values={cell} />),
               },
             ]}
             data={data}

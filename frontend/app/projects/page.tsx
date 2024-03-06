@@ -6,9 +6,7 @@ import { Grid, _ } from "gridjs-react";
 import React, { useEffect, useRef } from "react";
 import Navbar from "../navbar";
 import Header from "../header";
-
-const ProjectLink = ({ name }) => <a href={"/projects/" + name}>{name}</a>;
-const UserLink = ({ name }) => <a href={"/users/" + name}>{name}</a>;
+import { UserLink, ProjectLink } from "@/components/link";
 
 export default function Projects() {
   return (
@@ -23,11 +21,11 @@ export default function Projects() {
             columns={[
               {
                 name: "Name",
-                formatter: (cell) => _(<ProjectLink name={cell} />),
+                formatter: (cell: string) => _(<ProjectLink name={cell} />),
               },
               {
                 name: "Owner",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: any) => _(<UserLink name={cell} />),
               },
             ]}
             data={[

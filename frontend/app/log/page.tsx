@@ -1,14 +1,11 @@
 "use client";
 import "gridjs/dist/theme/mermaid.css";
 import "../globals.css";
-import Image from "next/image";
 import { Grid, _ } from "gridjs-react";
 import React, { useEffect, useRef } from "react";
 import Navbar from "../navbar";
 import Header from "../header";
-
-const ProjectLink = ({ name }) => <a href={"/projects/" + name}>{name}</a>;
-const UserLink = ({ name }) => <a href={"/users/" + name}>{name}</a>;
+import { UserLink, ProjectLink } from "@/components/link";
 
 export default function ProjectLog() {
   return (
@@ -23,23 +20,23 @@ export default function ProjectLog() {
             columns={[
               {
                 name: "Timestamp",
-                formatter: (cell) => _(<ProjectLink name={cell} />),
+                formatter: (cell: any) => _(<ProjectLink name={cell} />),
               },
               {
                 name: "User",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: any) => _(<UserLink name={cell} />),
               },
               {
                 name: "Role",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: any) => _(<UserLink name={cell} />),
               },
               {
                 name: "Request",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: any) => _(<UserLink name={cell} />),
               },
               {
                 name: "Status",
-                formatter: (cell) => _(<UserLink name={cell} />),
+                formatter: (cell: any) => _(<UserLink name={cell} />),
               },
             ]}
             data={[
